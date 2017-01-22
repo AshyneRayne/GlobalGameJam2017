@@ -34,10 +34,6 @@ AGGJ17AlphaPawn::AGGJ17AlphaPawn()
 	Camera->SetupAttachment(SpringArm, USpringArmComponent::SocketName);
 	Camera->bUsePawnControlRotation = false; // Don't rotate camera with controller
 
-	//Create audio component
-	/*Audio = CreateDefaultSubobject<UAudioComponent>(TEXT("Audio0"));
-	Audio->SetupAttachment(RootComponent);*/
-
 	// Set handling parameters
 	Acceleration = 500.f;
 	TurnSpeed = 50.f;
@@ -91,7 +87,7 @@ void AGGJ17AlphaPawn::ThrustInput(float Val)
 	// Is there no input?
 	bool bHasInput = !FMath::IsNearlyEqual(Val, 0.f);
 	// If input is not held down, reduce speed
-	float CurrentAcc = bHasInput ? (Val * Acceleration) : (-0.5f * Acceleration);
+	float CurrentAcc = bHasInput ? (Val * Acceleration) : 0;//(-0.5f * Acceleration)
 	// Calculate new speed
 	float NewForwardSpeed = CurrentForwardSpeed + (GetWorld()->GetDeltaSeconds() * CurrentAcc);
 	// Clamp between MinSpeed and MaxSpeed
@@ -101,13 +97,13 @@ void AGGJ17AlphaPawn::ThrustInput(float Val)
 void AGGJ17AlphaPawn::MoveUpInput(float Val)
 {
 	// Target pitch speed is based in input
-	float TargetPitchSpeed = (Val * TurnSpeed * -1.f);
+	//float TargetPitchSpeed = (Val * TurnSpeed * -1.f);
 
 	// When steering, we decrease pitch slightly
-	TargetPitchSpeed += (FMath::Abs(CurrentYawSpeed) * -0.2f);
+	//TargetPitchSpeed += (FMath::Abs(CurrentYawSpeed) * -0.2f);
 
 	// Smoothly interpolate to target pitch speed
-	CurrentPitchSpeed = FMath::FInterpTo(CurrentPitchSpeed, TargetPitchSpeed, GetWorld()->GetDeltaSeconds(), 2.f);
+	CurrentPitchSpeed = 0;// FMath::FInterpTo(CurrentPitchSpeed, TargetPitchSpeed, GetWorld()->GetDeltaSeconds(), 2.f);
 }
 
 void AGGJ17AlphaPawn::MoveRightInput(float Val)

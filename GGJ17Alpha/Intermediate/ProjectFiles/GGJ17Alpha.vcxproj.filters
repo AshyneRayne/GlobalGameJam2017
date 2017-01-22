@@ -1,58 +1,67 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<None Include="..\..\GGJ17Alpha.uproject" />
-		<Filter Include="Source">
-			<UniqueIdentifier>{F88DCC42-4951-4D1F-8894-570E53E082C7}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\GGJ17Alpha.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<None Include="..\..\Source\GGJ17AlphaEditor.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<Filter Include="Config">
-			<UniqueIdentifier>{6CEBE1CF-1725-4786-AAAD-12D1BF464C28}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Config\DefaultEditor.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEngine.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultGame.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultInput.ini">
-			<Filter>Config</Filter>
-		</None >
-		<Filter Include="Source\GGJ17Alpha">
-			<UniqueIdentifier>{E1D43901-B07B-47D9-BADE-B3F0810F236B}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\GGJ17Alpha\GGJ17Alpha.Build.cs">
-			<Filter>Source\GGJ17Alpha</Filter>
-		</None >
-		<ClCompile Include="..\..\Source\GGJ17Alpha\GGJ17Alpha.cpp">
-			<Filter>Source\GGJ17Alpha</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\GGJ17Alpha\GGJ17Alpha.h">
-			<Filter>Source\GGJ17Alpha</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\GGJ17Alpha\GGJ17AlphaGameMode.cpp">
-			<Filter>Source\GGJ17Alpha</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\GGJ17Alpha\GGJ17AlphaGameMode.h">
-			<Filter>Source\GGJ17Alpha</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\GGJ17Alpha\GGJ17AlphaPawn.cpp">
-			<Filter>Source\GGJ17Alpha</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\GGJ17Alpha\GGJ17AlphaPawn.h">
-			<Filter>Source\GGJ17Alpha</Filter>
-		</ClInclude >
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\GGJ17Alpha.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F88DCC42-4951-4D1F-8894-570E53E082C7}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GGJ17Alpha.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\GGJ17AlphaEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{6CEBE1CF-1725-4786-AAAD-12D1BF464C28}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\GGJ17Alpha">
+      <UniqueIdentifier>{E1D43901-B07B-47D9-BADE-B3F0810F236B}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GGJ17Alpha\GGJ17Alpha.Build.cs">
+      <Filter>Source\GGJ17Alpha</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\GGJ17Alpha\GGJ17Alpha.cpp">
+      <Filter>Source\GGJ17Alpha</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GGJ17Alpha\GGJ17Alpha.h">
+      <Filter>Source\GGJ17Alpha</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GGJ17Alpha\GGJ17AlphaGameMode.cpp">
+      <Filter>Source\GGJ17Alpha</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GGJ17Alpha\GGJ17AlphaGameMode.h">
+      <Filter>Source\GGJ17Alpha</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GGJ17Alpha\GGJ17AlphaPawn.cpp">
+      <Filter>Source\GGJ17Alpha</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GGJ17Alpha\GGJ17AlphaPawn.h">
+      <Filter>Source\GGJ17Alpha</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\GGJ17Alpha\GGJPlayer.h">
+      <Filter>Source\GGJ17Alpha</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\GGJ17Alpha\GGJPlayer.cpp">
+      <Filter>Source\GGJ17Alpha</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

@@ -2,7 +2,7 @@
 	"TargetName" : "GGJ17AlphaEditor",
 	"Platform" : "Win64",
 	"Configuration" : "Development",
-	"BuildId" : "",
+	"BuildId" : "7e3d4c94-a074-47e6-96ba-22bec77b7591",
 	"Version" : 
 	{
 		"MajorVersion" : 4,
@@ -16,15 +16,15 @@
 	"BuildProducts" :
 	[
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-GGJ17Alpha.dll",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-GGJ17Alpha-8455.dll",
 			"Type" : "DynamicLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-GGJ17Alpha.pdb",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-GGJ17Alpha-8455.pdb",
 			"Type" : "SymbolFile"
 		},
 		{
-			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-GGJ17Alpha.lib",
+			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-GGJ17Alpha-8455.lib",
 			"Type" : "ImportLibrary"
 		}
 	],
@@ -180,6 +180,10 @@
 		},
 		{
 			"Path" : "$(EngineDir)/Plugins/Runtime/ProceduralMeshComponent/ProceduralMeshComponent.uplugin",
+			"Type" : "UFS"
+		},
+		{
+			"Path" : "$(EngineDir)/Plugins/Runtime/SoundVisualizations/SoundVisualizations.uplugin",
 			"Type" : "UFS"
 		},
 		{

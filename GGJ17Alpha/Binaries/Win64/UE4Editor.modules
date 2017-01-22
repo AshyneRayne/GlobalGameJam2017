@@ -1,9 +1,9 @@
 {
 	"Changelist" : 3249277,
 	"CompatibleChangelist" : 3195953,
-	"BuildId" : "",
+	"BuildId" : "7e3d4c94-a074-47e6-96ba-22bec77b7591",
 	"Modules" : 
 	{
-		"GGJ17Alpha" : "UE4Editor-GGJ17Alpha-1836.dll"
+		"GGJ17Alpha" : "UE4Editor-GGJ17Alpha-8455.dll"
 	}
 }

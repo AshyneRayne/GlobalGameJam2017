@@ -18,6 +18,18 @@ void EmptyLinkFunctionForGeneratedCode1GGJ17Alpha() {}
 	{
 	}
 	IMPLEMENT_CLASS(AGGJ17AlphaPawn, 3669030111);
+	void AGGJPlayer::StaticRegisterNativesAGGJPlayer()
+	{
+		FNativeFunctionRegistrar::RegisterFunction(AGGJPlayer::StaticClass(), "DecreaseStamina",(Native)&AGGJPlayer::execDecreaseStamina);
+		FNativeFunctionRegistrar::RegisterFunction(AGGJPlayer::StaticClass(), "EnableSpecial",(Native)&AGGJPlayer::execEnableSpecial);
+		FNativeFunctionRegistrar::RegisterFunction(AGGJPlayer::StaticClass(), "GetMaxStamina",(Native)&AGGJPlayer::execGetMaxStamina);
+		FNativeFunctionRegistrar::RegisterFunction(AGGJPlayer::StaticClass(), "GetMovementSpeed",(Native)&AGGJPlayer::execGetMovementSpeed);
+		FNativeFunctionRegistrar::RegisterFunction(AGGJPlayer::StaticClass(), "GetStamina",(Native)&AGGJPlayer::execGetStamina);
+		FNativeFunctionRegistrar::RegisterFunction(AGGJPlayer::StaticClass(), "GetStaminaPercent",(Native)&AGGJPlayer::execGetStaminaPercent);
+		FNativeFunctionRegistrar::RegisterFunction(AGGJPlayer::StaticClass(), "IncreaseStamina",(Native)&AGGJPlayer::execIncreaseStamina);
+		FNativeFunctionRegistrar::RegisterFunction(AGGJPlayer::StaticClass(), "IsUsingSpecial",(Native)&AGGJPlayer::execIsUsingSpecial);
+	}
+	IMPLEMENT_CLASS(AGGJPlayer, 1749105249);
 #if USE_COMPILED_IN_NATIVES
 // Cross Module References
 	ENGINE_API class UClass* Z_Construct_UClass_AGameModeBase();
@@ -25,11 +37,22 @@ void EmptyLinkFunctionForGeneratedCode1GGJ17Alpha() {}
 	ENGINE_API class UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API class UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+	ENGINE_API class UClass* Z_Construct_UClass_ACharacter();
 
 	GGJ17ALPHA_API class UClass* Z_Construct_UClass_AGGJ17AlphaGameMode_NoRegister();
 	GGJ17ALPHA_API class UClass* Z_Construct_UClass_AGGJ17AlphaGameMode();
 	GGJ17ALPHA_API class UClass* Z_Construct_UClass_AGGJ17AlphaPawn_NoRegister();
 	GGJ17ALPHA_API class UClass* Z_Construct_UClass_AGGJ17AlphaPawn();
+	GGJ17ALPHA_API class UFunction* Z_Construct_UFunction_AGGJPlayer_DecreaseStamina();
+	GGJ17ALPHA_API class UFunction* Z_Construct_UFunction_AGGJPlayer_EnableSpecial();
+	GGJ17ALPHA_API class UFunction* Z_Construct_UFunction_AGGJPlayer_GetMaxStamina();
+	GGJ17ALPHA_API class UFunction* Z_Construct_UFunction_AGGJPlayer_GetMovementSpeed();
+	GGJ17ALPHA_API class UFunction* Z_Construct_UFunction_AGGJPlayer_GetStamina();
+	GGJ17ALPHA_API class UFunction* Z_Construct_UFunction_AGGJPlayer_GetStaminaPercent();
+	GGJ17ALPHA_API class UFunction* Z_Construct_UFunction_AGGJPlayer_IncreaseStamina();
+	GGJ17ALPHA_API class UFunction* Z_Construct_UFunction_AGGJPlayer_IsUsingSpecial();
+	GGJ17ALPHA_API class UClass* Z_Construct_UClass_AGGJPlayer_NoRegister();
+	GGJ17ALPHA_API class UClass* Z_Construct_UClass_AGGJPlayer();
 	GGJ17ALPHA_API class UPackage* Z_Construct_UPackage__Script_GGJ17Alpha();
 	UClass* Z_Construct_UClass_AGGJ17AlphaGameMode_NoRegister()
 	{
@@ -133,6 +156,259 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AGGJ17AlphaPawn(Z_Construct_UClass_AGGJ17AlphaPawn, &AGGJ17AlphaPawn::StaticClass, TEXT("AGGJ17AlphaPawn"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AGGJ17AlphaPawn);
+	UFunction* Z_Construct_UFunction_AGGJPlayer_DecreaseStamina()
+	{
+		struct GGJPlayer_eventDecreaseStamina_Parms
+		{
+			float value;
+		};
+		UObject* Outer=Z_Construct_UClass_AGGJPlayer();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("DecreaseStamina"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535, sizeof(GGJPlayer_eventDecreaseStamina_Parms));
+			UProperty* NewProp_value = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("value"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(value, GGJPlayer_eventDecreaseStamina_Parms), 0x0010000000000080);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Stamina"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("GGJPlayer.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_AGGJPlayer_EnableSpecial()
+	{
+		struct GGJPlayer_eventEnableSpecial_Parms
+		{
+			bool value;
+		};
+		UObject* Outer=Z_Construct_UClass_AGGJPlayer();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("EnableSpecial"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535, sizeof(GGJPlayer_eventEnableSpecial_Parms));
+			CPP_BOOL_PROPERTY_BITMASK_STRUCT(value, GGJPlayer_eventEnableSpecial_Parms, bool);
+			UProperty* NewProp_value = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("value"), RF_Public|RF_Transient|RF_MarkAsNative) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(value, GGJPlayer_eventEnableSpecial_Parms), 0x0010000000000080, CPP_BOOL_PROPERTY_BITMASK(value, GGJPlayer_eventEnableSpecial_Parms), sizeof(bool), true);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Stamina"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("GGJPlayer.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_AGGJPlayer_GetMaxStamina()
+	{
+		struct GGJPlayer_eventGetMaxStamina_Parms
+		{
+			float ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_AGGJPlayer();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("GetMaxStamina"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535, sizeof(GGJPlayer_eventGetMaxStamina_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(ReturnValue, GGJPlayer_eventGetMaxStamina_Parms), 0x0010000000000580);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Stamina"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("GGJPlayer.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_AGGJPlayer_GetMovementSpeed()
+	{
+		struct GGJPlayer_eventGetMovementSpeed_Parms
+		{
+			float ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_AGGJPlayer();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("GetMovementSpeed"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535, sizeof(GGJPlayer_eventGetMovementSpeed_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(ReturnValue, GGJPlayer_eventGetMovementSpeed_Parms), 0x0010000000000580);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Movement"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("GGJPlayer.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_AGGJPlayer_GetStamina()
+	{
+		struct GGJPlayer_eventGetStamina_Parms
+		{
+			float ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_AGGJPlayer();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("GetStamina"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535, sizeof(GGJPlayer_eventGetStamina_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(ReturnValue, GGJPlayer_eventGetStamina_Parms), 0x0010000000000580);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Stamina"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("GGJPlayer.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_AGGJPlayer_GetStaminaPercent()
+	{
+		struct GGJPlayer_eventGetStaminaPercent_Parms
+		{
+			float ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_AGGJPlayer();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("GetStaminaPercent"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535, sizeof(GGJPlayer_eventGetStaminaPercent_Parms));
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(ReturnValue, GGJPlayer_eventGetStaminaPercent_Parms), 0x0010000000000580);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Stamina"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("GGJPlayer.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_AGGJPlayer_IncreaseStamina()
+	{
+		struct GGJPlayer_eventIncreaseStamina_Parms
+		{
+			float value;
+		};
+		UObject* Outer=Z_Construct_UClass_AGGJPlayer();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("IncreaseStamina"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535, sizeof(GGJPlayer_eventIncreaseStamina_Parms));
+			UProperty* NewProp_value = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("value"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(value, GGJPlayer_eventIncreaseStamina_Parms), 0x0010000000000080);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Stamina"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("GGJPlayer.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_AGGJPlayer_IsUsingSpecial()
+	{
+		struct GGJPlayer_eventIsUsingSpecial_Parms
+		{
+			bool ReturnValue;
+		};
+		UObject* Outer=Z_Construct_UClass_AGGJPlayer();
+		static UFunction* ReturnFunction = NULL;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("IsUsingSpecial"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), NULL, 0x04020401, 65535, sizeof(GGJPlayer_eventIsUsingSpecial_Parms));
+			CPP_BOOL_PROPERTY_BITMASK_STRUCT(ReturnValue, GGJPlayer_eventIsUsingSpecial_Parms, bool);
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(ReturnValue, GGJPlayer_eventIsUsingSpecial_Parms), 0x0010000000000580, CPP_BOOL_PROPERTY_BITMASK(ReturnValue, GGJPlayer_eventIsUsingSpecial_Parms), sizeof(bool), true);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("Stamina"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("GGJPlayer.h"));
+#endif
+		}
+		return ReturnFunction;
+	}
+	UClass* Z_Construct_UClass_AGGJPlayer_NoRegister()
+	{
+		return AGGJPlayer::StaticClass();
+	}
+	UClass* Z_Construct_UClass_AGGJPlayer()
+	{
+		static UClass* OuterClass = NULL;
+		if (!OuterClass)
+		{
+			Z_Construct_UClass_ACharacter();
+			Z_Construct_UPackage__Script_GGJ17Alpha();
+			OuterClass = AGGJPlayer::StaticClass();
+			if (!(OuterClass->ClassFlags & CLASS_Constructed))
+			{
+				UObjectForceRegistration(OuterClass);
+				OuterClass->ClassFlags |= 0x20900080;
+
+				OuterClass->LinkChild(Z_Construct_UFunction_AGGJPlayer_DecreaseStamina());
+				OuterClass->LinkChild(Z_Construct_UFunction_AGGJPlayer_EnableSpecial());
+				OuterClass->LinkChild(Z_Construct_UFunction_AGGJPlayer_GetMaxStamina());
+				OuterClass->LinkChild(Z_Construct_UFunction_AGGJPlayer_GetMovementSpeed());
+				OuterClass->LinkChild(Z_Construct_UFunction_AGGJPlayer_GetStamina());
+				OuterClass->LinkChild(Z_Construct_UFunction_AGGJPlayer_GetStaminaPercent());
+				OuterClass->LinkChild(Z_Construct_UFunction_AGGJPlayer_IncreaseStamina());
+				OuterClass->LinkChild(Z_Construct_UFunction_AGGJPlayer_IsUsingSpecial());
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+				UProperty* NewProp_MovementSpeed = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("MovementSpeed"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(MovementSpeed, AGGJPlayer), 0x0040000000000001);
+				CPP_BOOL_PROPERTY_BITMASK_STRUCT(bUsingSpecial, AGGJPlayer, bool);
+				UProperty* NewProp_bUsingSpecial = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("bUsingSpecial"), RF_Public|RF_Transient|RF_MarkAsNative) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(bUsingSpecial, AGGJPlayer), 0x0040000000000001, CPP_BOOL_PROPERTY_BITMASK(bUsingSpecial, AGGJPlayer), sizeof(bool), true);
+				UProperty* NewProp_MaxStamina = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("MaxStamina"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(MaxStamina, AGGJPlayer), 0x0040000000020001);
+				UProperty* NewProp_Stamina = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("Stamina"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(Stamina, AGGJPlayer), 0x0040000000000001);
+				UProperty* NewProp_StaticMesh = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("StaticMesh"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(StaticMesh, AGGJPlayer), 0x0040000000080009, Z_Construct_UClass_UStaticMeshComponent_NoRegister());
+				UProperty* NewProp_SpringArm = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("SpringArm"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(SpringArm, AGGJPlayer), 0x0040000000080009, Z_Construct_UClass_USpringArmComponent_NoRegister());
+				UProperty* NewProp_Camera = new(EC_InternalUseOnlyConstructor, OuterClass, TEXT("Camera"), RF_Public|RF_Transient|RF_MarkAsNative) UObjectProperty(CPP_PROPERTY_BASE(Camera, AGGJPlayer), 0x0040000000080009, Z_Construct_UClass_UCameraComponent_NoRegister());
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_AGGJPlayer_DecreaseStamina(), "DecreaseStamina"); // 460177649
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_AGGJPlayer_EnableSpecial(), "EnableSpecial"); // 2236707448
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_AGGJPlayer_GetMaxStamina(), "GetMaxStamina"); // 2556499287
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_AGGJPlayer_GetMovementSpeed(), "GetMovementSpeed"); // 3635174508
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_AGGJPlayer_GetStamina(), "GetStamina"); // 794488257
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_AGGJPlayer_GetStaminaPercent(), "GetStaminaPercent"); // 2919023688
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_AGGJPlayer_IncreaseStamina(), "IncreaseStamina"); // 3477685419
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_AGGJPlayer_IsUsingSpecial(), "IsUsingSpecial"); // 2367797546
+				OuterClass->StaticLink();
+#if WITH_METADATA
+				UMetaData* MetaData = OuterClass->GetOutermost()->GetMetaData();
+				MetaData->SetValue(OuterClass, TEXT("HideCategories"), TEXT("Navigation"));
+				MetaData->SetValue(OuterClass, TEXT("IncludePath"), TEXT("GGJPlayer.h"));
+				MetaData->SetValue(OuterClass, TEXT("ModuleRelativePath"), TEXT("GGJPlayer.h"));
+				MetaData->SetValue(NewProp_MovementSpeed, TEXT("Category"), TEXT("Movement"));
+				MetaData->SetValue(NewProp_MovementSpeed, TEXT("ModuleRelativePath"), TEXT("GGJPlayer.h"));
+				MetaData->SetValue(NewProp_bUsingSpecial, TEXT("Category"), TEXT("Stamina"));
+				MetaData->SetValue(NewProp_bUsingSpecial, TEXT("ModuleRelativePath"), TEXT("GGJPlayer.h"));
+				MetaData->SetValue(NewProp_MaxStamina, TEXT("Category"), TEXT("Stamina"));
+				MetaData->SetValue(NewProp_MaxStamina, TEXT("ModuleRelativePath"), TEXT("GGJPlayer.h"));
+				MetaData->SetValue(NewProp_Stamina, TEXT("Category"), TEXT("Stamina"));
+				MetaData->SetValue(NewProp_Stamina, TEXT("ModuleRelativePath"), TEXT("GGJPlayer.h"));
+				MetaData->SetValue(NewProp_StaticMesh, TEXT("Category"), TEXT("Mesh"));
+				MetaData->SetValue(NewProp_StaticMesh, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_StaticMesh, TEXT("ModuleRelativePath"), TEXT("GGJPlayer.h"));
+				MetaData->SetValue(NewProp_SpringArm, TEXT("Category"), TEXT("Camera"));
+				MetaData->SetValue(NewProp_SpringArm, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_SpringArm, TEXT("ModuleRelativePath"), TEXT("GGJPlayer.h"));
+				MetaData->SetValue(NewProp_Camera, TEXT("Category"), TEXT("Camera"));
+				MetaData->SetValue(NewProp_Camera, TEXT("EditInline"), TEXT("true"));
+				MetaData->SetValue(NewProp_Camera, TEXT("ModuleRelativePath"), TEXT("GGJPlayer.h"));
+#endif
+			}
+		}
+		check(OuterClass->GetClass());
+		return OuterClass;
+	}
+	static FCompiledInDefer Z_CompiledInDefer_UClass_AGGJPlayer(Z_Construct_UClass_AGGJPlayer, &AGGJPlayer::StaticClass, TEXT("AGGJPlayer"), false, nullptr, nullptr, nullptr);
+	DEFINE_VTABLE_PTR_HELPER_CTOR(AGGJPlayer);
 	UPackage* Z_Construct_UPackage__Script_GGJ17Alpha()
 	{
 		static UPackage* ReturnPackage = NULL;
@@ -141,8 +417,8 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), NULL, FName(TEXT("/Script/GGJ17Alpha")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x1BEE4673;
-			Guid.B = 0x8F63E848;
+			Guid.A = 0x0D4C6FB7;
+			Guid.B = 0x0B6979F4;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);

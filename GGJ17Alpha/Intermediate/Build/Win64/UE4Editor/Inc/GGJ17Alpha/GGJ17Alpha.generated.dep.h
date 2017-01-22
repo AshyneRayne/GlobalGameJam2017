@@ -11,3 +11,6 @@
 #ifndef GGJ17ALPHA_GGJ17AlphaPawn_generated_h
 	#include "GGJ17AlphaPawn.h"
 #endif
+#ifndef GGJ17ALPHA_GGJPlayer_generated_h
+	#include "GGJPlayer.h"
+#endif

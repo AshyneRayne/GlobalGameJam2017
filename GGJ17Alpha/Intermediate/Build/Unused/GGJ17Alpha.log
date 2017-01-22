@@ -1,0 +1,13 @@
+﻿  Compiling game modules for hot reload
+  Parsing headers for GGJ17AlphaEditor
+    Running UnrealHeaderTool "C:\Users\natha\Desktop\GIT\GlobalGameJam2017\GGJ17Alpha\GGJ17Alpha.uproject" "C:\Users\natha\Desktop\GIT\GlobalGameJam2017\GGJ17Alpha\Intermediate\Build\Win64\GGJ17AlphaEditor\Development\GGJ17AlphaEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for GGJ17AlphaEditor in 3.5669455 seconds
+  Performing 4 actions (4 in parallel)
+  GGJPlayer.cpp
+  GGJ17AlphaGameMode.cpp
+  GGJ17Alpha.generated.cpp
+C:\Users\natha\Desktop\GIT\GlobalGameJam2017\GGJ17Alpha\Source\GGJ17Alpha\GGJPlayer.cpp(110): warning C4996: 'FVector2D::SafeNormal': Deprecated due to unclear name, use GetSafeNormal instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+  c:\program files (x86)\epic games\4.14\engine\source\runtime\core\public\math\Vector2D.h(813): note: see declaration of 'FVector2D::SafeNormal'
+  [4/4] Link UE4Editor-GGJ17Alpha-2265.dll
+     Creating library C:\Users\natha\Desktop\GIT\GlobalGameJam2017\GGJ17Alpha\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-GGJ17Alpha-2265.lib and object C:\Users\natha\Desktop\GIT\GlobalGameJam2017\GGJ17Alpha\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-GGJ17Alpha-2265.exp
+  Total build time: 8.17 seconds

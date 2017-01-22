@@ -20,9 +20,6 @@ class AGGJ17AlphaPawn : public APawn
 	UPROPERTY(Category = Camera, VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* Camera;
 
-	////Create Audio Component
-	//UPROPERTY(Category = Audio, VisibleDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
-	//class UAudioComponent* Audio;
 public:
 	AGGJ17AlphaPawn();
 
@@ -83,6 +80,4 @@ public:
 	FORCEINLINE class USpringArmComponent* GetSpringArm() const { return SpringArm; }
 	/** Returns Camera subobject **/
 	FORCEINLINE class UCameraComponent* GetCamera() const { return Camera; }
-	////Returns Audio subobject
-	//FORCEINLINE class UAudioComponent* GetAudio() const { return Audio; }
 };
